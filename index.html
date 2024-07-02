@@ -10,60 +10,56 @@
 <body>
     <header>
         <nav class="navbar-index">
-            <a href="/index.html"><img class="logo-nav" src="./static/imagenes/Texto del párrafo (1).png" alt="logo"></a>
+            <a href="/home.html"><img class="logo-nav" src="./static/imagenes/Texto del párrafo (1).png" alt="logo"></a>
             <button id="logout" onclick="logout()">Cerrar Sesión</button>
         </nav>
     </header>
+
     <div>
         <div class="logo-centrado"></div>
-        <h1>Menu</h1><br>
-        <table>
-            <tr>
-                <td class="contenedor-centrado"><a href="altas.html">Alta de productos</a></td>
-            </tr>
-            <tr>
-                <td class="contenedor-centrado"><a href="listado.html">Listado de productos</a></td>
-            </tr>
-            <tr>
-                <td class="contenedor-centrado"><a href="modificaciones.html">Modificar datos de productos</a></td>
-            </tr>
-            <tr>
-                <td class="contenedor-centrado"><a href="listadoEliminar.html">Eliminar productos</a></td>
-            </tr>
-        </table>
-        <footer>
-            <div class="footer-links">
-                <div class="footer-container">
-                    <ul>
-                        <li><a href="#"><h4>NUESTRA COMPAÑÍA</h4></a></li>
-                        <li><a href="#">Completar</a></li>
-                        <li><a href="#">Completar</a></li>
-                        <li><a href="#">Completar</a></li>
-                        <li><a href="#">Completar</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="#"><h4>COMPLETAR</h4></a></li>
-                        <li><a href="#">Completar</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="#"><h4>COMPLETAR</h4></a></li>
-                        <li><a href="#">Completar</a></li>
-                        <li><a href="#">Completar</a></li>
-                        <li><a href="#">Completar</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="#"><h4>MÁS SOBRE AUTOSELECT</h4></a></li>
-                        <li><a href="#">Developer Portal</a></li>
-                        <li><a href="#">Completar</a></li>
-                        <li><a href="#">Contacto</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-copy">
-                <h3>&copy; Auto Select 2024</h3>
-            </div>
-        </footer>
+        <h1>Login</h1><br>
+        <form id="login-form" onsubmit="return login(event)">
+            <div class="contenedor-centrado"><label for="usuario">Usuario</label></div>
+            <div><input type="text" placeholder="Escriba su usuario" id="usuario" required></div>
+            <div class="contenedor-centrado"><label for="clave">Contraseña</label></div>
+            <div><input type="password" placeholder="Escriba su contraseña" id="clave" required></div>
+            <div><input id="entrar" type="submit" value="Entrar"></div>
+        </form>
+        <script src="./script.js"></script>
     </div>
-    <script src="./script.js"></script>
+    
+    <footer>
+        <div class="footer-links">
+            <div class="footer-container">
+                <ul>
+                    <li><a href="#"><h4>NUESTRA COMPAÑÍA</h4></a></li>
+                    <li><a href="#">Completar</a></li>
+                    <li><a href="#">Completar</a></li>
+                    <li><a href="#">Completar</a></li>
+                    <li><a href="#">Completar</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#"><h4>COMPLETAR</h4></a></li>
+                    <li><a href="#">Completar</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#"><h4>COMPLETAR</h4></a></li>
+                    <li><a href="#">Completar</a></li>
+                    <li><a href="#">Completar</a></li>
+                    <li><a href="#">Completar</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#"><h4>MÁS SOBRE AUTOSELECT</h4></a></li>
+                    <li><a href="#">Developer Portal</a></li>
+                    <li><a href="#">Completar</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <h3>&copy; Auto Select 2024</h3>
+        </div>
+    </footer>
 </body>
 </html>
+

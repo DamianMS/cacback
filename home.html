@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Select </title>
+    <title>Auto Select</title>
     <link rel="icon" type="icon" href="/static/imagenes/mercedes.png">
     <link rel="stylesheet" href="./static/css/estilos.css">
 </head>
-
 <body>
     <header>
         <nav class="navbar-index">
@@ -16,62 +14,56 @@
             <button id="logout" onclick="logout()">Cerrar Sesión</button>
         </nav>
     </header>
-
     <div>
         <div class="logo-centrado"></div>
-        <h1>Login</h1><br>
-        <form id="login-form" onsubmit="return login(event)">
+        <h1>Menu</h1><br>
+        <table>
             <tr>
-                <td class="contenedor-centrado"><label for="usuario">Usuario</label></td>
+                <td class="contenedor-centrado"><a href="altas.html">Alta de productos</a></td>
             </tr>
             <tr>
-                <td><input type="text" placeholder="Escriba su usuario" id="usuario" required></td>
+                <td class="contenedor-centrado"><a href="listado.html">Listado de productos</a></td>
             </tr>
             <tr>
-                <td class="contenedor-centrado"><label for="clave">Contraseña</label></td>
+                <td class="contenedor-centrado"><a href="modificaciones.html">Modificar datos de productos</a></td>
             </tr>
             <tr>
-                <td><input type="password" placeholder="Escriba su contraseña" id="clave" ></td>
+                <td class="contenedor-centrado"><a href="listadoEliminar.html">Eliminar productos</a></td>
             </tr>
-            <tr>
-                <td><input id="entrar" type="submit" value="Entrar" onclick="login()"></td>
-            </tr>
-        </form>
-        <script src="/script.js"></script>
-    </div>
-    
-    <footer>
-        <div class="footer-links">
-            <div class="footer-container">
-                <ul>
-                    <li><a href="#"><h4>NUESTRA COMPAÑÍA</h4></a></li>
-                    <li><a href="#">Completar</a></li>
-                    <li><a href="#">Completar</a></li>
-                    <li><a href="#">Completar</a></li>
-                    <li><a href="#">Completar</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#"><h4>COMPLETAR</h4></a></li>
-                    <li><a href="#">Completar</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#"><h4>COMPLETAR</h4></a></li>
-                    <li><a href="#">Completar</a></li>
-                    <li><a href="#">Completar</a></li>
-                    <li><a href="#">Completar</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#"><h4>MÁS SOBRE AUTOSELECT</h4></a></li>
-                    <li><a href="#">Developer Portal</a></li>
-                    <li><a href="#">Completar</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
+        </table>
+        <footer>
+            <div class="footer-links">
+                <div class="footer-container">
+                    <ul>
+                        <li><a href="#"><h4>NUESTRA COMPAÑÍA</h4></a></li>
+                        <li><a href="#">Completar</a></li>
+                        <li><a href="#">Completar</a></li>
+                        <li><a href="#">Completar</a></li>
+                        <li><a href="#">Completar</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><h4>COMPLETAR</h4></a></li>
+                        <li><a href="#">Completar</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><h4>COMPLETAR</h4></a></li>
+                        <li><a href="#">Completar</a></li>
+                        <li><a href="#">Completar</a></li>
+                        <li><a href="#">Completar</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><h4>MÁS SOBRE AUTOSELECT</h4></a></li>
+                        <li><a href="#">Developer Portal</a></li>
+                        <li><a href="#">Completar</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="footer-copy">
-            <h3>&copy; Auto Select 2024</h3>
-        </div>
-    </footer>
+            <div class="footer-copy">
+                <h3>&copy; Auto Select 2024</h3>
+            </div>
+        </footer>
+    </div>
+    <script src="./script.js"></script>
 </body>
-
 </html>

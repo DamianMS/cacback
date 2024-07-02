@@ -5,7 +5,7 @@ function login(event){
 
     if (user == "Admin" && pass == "admin123") {
         sessionStorage.setItem("loggedIn", true);
-        window.location = "index.html";
+        window.location = "home.html";
     } else {
         alert("Datos incorrectos");
     }
@@ -13,11 +13,11 @@ function login(event){
 function logout() {
     sessionStorage.removeItem("loggedIn");
     alert("Sesión cerrada");
-    window.location = "home.html"; 
+    window.location = "index.html"; 
 }
 if (user == "Admin" && pass == "admin123") {
     sessionStorage.setItem("loggedIn", true);
-    window.location = "home.html";
+    window.location = "index.html";
 } else {
     alert("Datos incorrectos");
 }
@@ -25,8 +25,8 @@ if (user == "Admin" && pass == "admin123") {
 
 
 window.onload = function() {
-    if (!sessionStorage.getItem("loggedIn") && window.location.pathname !== "/home.html") {
-        window.location = "home.html"; 
+    if (!sessionStorage.getItem("loggedIn") && window.location.pathname !== "/index.html") {
+        window.location = "index.html"; 
     }
 };
 

@@ -8,9 +8,9 @@
 
 body {
     font-family: Mon;
-    background: url('/static/imagenes/venta-auto-min.jpg') no-repeat center center fixed;
+    background: url('/final/static/imagenes/venta-auto-min.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: white; 
+    /* color: white;  */
 }
 
 label{
@@ -25,7 +25,8 @@ label{
     font-size: 85%;
     font-weight: 800;
     font-size: 2vh;
-    text-shadow: #ffffff 0 0 5px;   
+    text-shadow: #ffffff 0 0 5px;
+    
 }
 
 input{
@@ -41,8 +42,10 @@ input{
     font-size: 85%;
     font-weight: 800;
     font-size: 2vh;
-    text-shadow: #ffffff 0 0 5px; 
+    text-shadow: #ffffff 0 0 5px;
+    
 }
+
 
 #tableta {
     display: grid;
