@@ -1,7 +1,7 @@
 #--------------------------------------------------------------------
 # Instalar con pip install Flask
 from flask import Flask, request, jsonify, render_template
-#from flask import request
+from flask import request
 
 # Instalar con pip install flask-cors
 from flask_cors import CORS

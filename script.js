@@ -1,3 +1,34 @@
+function login(event){
+    event.preventDefault(); 
+    let user = document.getElementById("usuario").value;
+    let pass = document.getElementById("clave").value;
+
+    if (user == "Admin" && pass == "admin123") {
+        sessionStorage.setItem("loggedIn", true);
+        window.location = "index.html";
+    } else {
+        alert("Datos incorrectos");
+    }
+}
+function logout() {
+    sessionStorage.removeItem("loggedIn");
+    alert("Sesión cerrada");
+    window.location = "home.html"; 
+}
+if (user == "Admin" && pass == "admin123") {
+    sessionStorage.setItem("loggedIn", true);
+    window.location = "home.html";
+} else {
+    alert("Datos incorrectos");
+}
+
+
+
+window.onload = function() {
+    if (!sessionStorage.getItem("loggedIn") && window.location.pathname !== "/home.html") {
+        window.location = "home.html"; 
+    }
+};
 
 
 // *************************************************************************SCRIPT LISTADO********************************************************************************
@@ -53,7 +84,7 @@
 
         //Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
 
-        // const URL = "https://DamianMS.pythonanywhere.com/"  !!!!!!!!!!!!!!!DESCOMENTAR ACA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        // // const URL = "https://DamianMS.pythonanywhere.com/"  
         
 
         // Capturamos el evento de envío del formulario
@@ -101,7 +132,7 @@
         })
             
         // ************************************************************************LISTADO ELIMINAR_VUE************************************************************************************
-        // const URL = "http://127.0.0.1:5000/" !!!!!!!!!!!!!!!!!!!!!!!! DESCOMENTAR ACA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        // const URL = "http://127.0.0.1:5000/" 
 
         //Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
         //const URL = "https://USUARIO.pythonanywhere.com/"
@@ -175,8 +206,7 @@
         // const URL = "http://127.0.0.1:5000/"
 
         //Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
-        // const URL = "https://DamianMS.pythonanywhere.com/" !!!!!!!!!!!!!!!!!!!!!!! DESCOMENTAR ACA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        
+        // const URL = "https://DamianMS.pythonanywhere.com/" 
         // Obtiene el contenido del inventario
         function obtenerProductos() {
             fetch(URL + 'productos') // Realiza una solicitud GET al servidor y obtener la lista de productos.
@@ -230,13 +260,13 @@
     
         // *******************************************************************MODIFICACIONES_VUE*******************************************************************************
 
-        // const URL = "http://127.0.0.1:5000/"  !!!!!!!!!!!!!!!!!!!!!!!!!!DESCOMENTAR ACA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        // const URL = "http://127.0.0.1:5000/"  
 
         //Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
         //const URL = "https://USUARIO.pythonanywhere.com/"
         
 
-        //Vue.createApp para crear nuestra aplicación Vue.      !!!!!!!!!!!!!!!!!!!!!!!!cambiar APPP por APP!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //Vue.createApp para crear nuestra aplicación Vue.      
         const appp = Vue.createApp({
             
             //La función data devuelve un objeto que contiene las siguientes propiedades: 
@@ -353,7 +383,7 @@
         //Cuando se llama a app.mount('#app'), Vue busca en el documento HTML un elemento con el id app. Vue entonces toma el control de este elemento y de todo su contenido. Esto significa que Vue puede reaccionar a los cambios en sus datos y actualizar automáticamente el HTML en este elemento. También maneja eventos, como clicks o entradas de formulario, y actualiza los datos según las interacciones del usuario.
 
         app.mount('#appp');
-        // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CAMBIAR APPP POR APP!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        
 
 
         // *******************************************************************MODIFICACIONES*******************************************************************************
@@ -361,7 +391,7 @@
 // const URL = "http://127.0.0.1:5000/"
 
         //Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
-        // const URL = "https://DamianMS.pythonanywhere.com/"  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!DESCOMENTAR ACA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        // const URL = "https://DamianMS.pythonanywhere.com/"  
 
         // Variables de estado para controlar la visibilidad y los datos del formulario
         let codigo = '';
